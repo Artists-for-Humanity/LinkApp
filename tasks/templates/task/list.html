@@ -1,5 +1,6 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://demo.themesberg.com/windows-95-ui-kit/css/w95.css">
 <style>
     body {
         background-color: #638CB8;
@@ -61,7 +62,7 @@
             <a class="btn btn-sm btn-danger" href="{% url 'delete' task.id %}">Delete</a>
 
             {% if task.complete == True %}
-            <strike>{{task}}</strike>
+            <s>{{task}}</s>
             {% else %}
             <span>{{task}}</span>
             {% endif %}
