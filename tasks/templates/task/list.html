@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<link rel="stylesheet" href="https://demo.themesberg.com/windows-95-ui-kit/css/w95.css">
+<link rel="stylesheet" href="style.css">
 <style>
     body {
         background-color: #638CB8;
@@ -53,6 +53,7 @@
         {% csrf_token %}
         <!--for site security-->
         {{ form.title }}
+        {{ form.link }}
         <input class="btn btn-info" type="submit" name="Create Task">
     </form>
     <div class="todo-list">
@@ -60,6 +61,8 @@
         <div class="item-row">
             <a class="btn btn-sm btn-info" href="{% url 'update_task' task.id %}">Update</a>
             <a class="btn btn-sm btn-danger" href="{% url 'delete' task.id %}">Delete</a>
+            <a class="btn btn-sm btn-danger">button</a>
+            #
 
             {% if task.complete == True %}
             <s>{{task}}</s>
