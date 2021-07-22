@@ -1,13 +1,12 @@
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+{% extends "../layout.html" %}
+{% block title %}Delete page{% endblock %}
+{% block content %}
+<p>Are you sure you want to delete "{{item}}"?</p>
 
-<div class="center-column">
-    <p>Are you sure you want to delete "{{item}}"?</p>
+<a href="{% url 'list' %}"> Cancel </a>
 
-    <a href="{% url 'list' %}"> Cancel </a>
-
-    <form method="POST" actions="">
-        {% csrf_token%}
-        <input type="submit" name="Confirm">
-    </form>
-
-</div>
+<form method="POST" actions="">
+    {% csrf_token%}
+    <input type="submit" name="Confirm">
+</form>
+{% endblock %}
