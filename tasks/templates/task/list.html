@@ -56,14 +56,13 @@
         {{ form.link }}
         <input class="btn btn-info" type="submit" name="Create Task">
     </form>
+
     <div class="todo-list">
         {% for task in tasks %}
         <div class="item-row">
-            <a class="btn btn-sm btn-info" href="{% url 'update_task' task.id %}">Update</a>
+            <a class="btn btn-sm btn-info" href="{% url 'update_task' task.id %}">Link</a>
             <a class="btn btn-sm btn-danger" href="{% url 'delete' task.id %}">Delete</a>
-            <a class="btn btn-sm btn-danger">button</a>
-            #
-
+            <a class="btn btn-sm btn-danger" href="{% url 'user' %}">User</a>
             {% if task.complete == True %}
             <s>{{task}}</s>
             {% else %}

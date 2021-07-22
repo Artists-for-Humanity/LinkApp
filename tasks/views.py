@@ -24,6 +24,10 @@ def index(request):
 	context = {'tasks': tasks, 'form':form}
 	return render(request, 'task/list.html', context)
 
+def user(request):
+	context = {'user': {'name': 'Jamie'}}
+	return render(request, 'task/user.html', context)
+
 def updateTask(request, pk): #pk is a url pattern
 	task = Task.objects.get(id=pk)
 
